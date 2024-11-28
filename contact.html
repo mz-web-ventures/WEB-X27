@@ -92,28 +92,26 @@
                 </div>
                 <div class="col-lg-7 mb-5 my-lg-5 py-5 pl-lg-5">
                     <div class="contact-form">
-                        {% load custom_filters %}
                         <form action="contact.html" method="post">
-                            {% csrf_token %}
                             <div class="control-group">
-                                {{ form.name.label_tag }}
-                                {{ form.name|add_class:"form-control input-field" }}
-                                <p class="help-block text-danger">{{ form.name.errors }}</p>
+                                <label for="name">Your Name
+                                    <input type="text" name="name" class="form-control input-field">
+                                </label>
                             </div>
                             <div class="control-group">
-                                {{ form.email.label_tag }}
-                                {{ form.email|add_class:"form-control input-field" }}
-                                <p class="help-block text-danger">{{ form.email.errors }}</p>
+                                <label for="mail">Your Email
+                                    <input type="email" name="email" class="form-control input-field">
+                                </label>
                             </div>
                             <div class="control-group">
-                                {{ form.project_location.label_tag }}
-                                {{ form.project_location|add_class:"form-control input-field" }}
-                                <p class="help-block text-danger">{{ form.location.errors }}</p>
+                                <label for="location">Project Location
+                                    <textarea name="location" class="form-control input-field" rows="5"></textarea>
+                                </label>
                             </div>
                             <div class="control-group">
-                                {{ form.describe_project.label_tag }}
-                                {{ form.describe_project|add_class:"form-control input-field" }}
-                                <p class="help-block text-danger">{{ form.project.errors }}</p>
+                                <label for="project">Describe About Your Project
+                                    <textarea name="project" class="form-control input-field" rows="10"></textarea>
+                                </label>
                             </div>
                             <div>
                                 <button class="btn btn-primary py-3 px-5" type="submit" id="submitbutton">SUBMIT</button>

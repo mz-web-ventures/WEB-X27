@@ -35,22 +35,20 @@
         <div class="wrapper">
             <div class="register-box">
                 <h2 class="display-5 text-secondary">Welcome to <span class="text-primary">IN</span>House!</h2>
-                {% load custom_filters %}
                 <form action="register.html" method="post">
-                    {% csrf_token %}
                     <div class="input_box">
                         <label for="username" class="label">Username</label>
-                        {{ form.username|add_class:"input-field form-control" }}
+                            <input type="email" name="username" class="input-field form-control">
                         <i class='bx bx-user-circle icon'></i>
                     </div>
                     <div class="input_box">
                         <label for="password" class="label">Password</label>
-                        {{ form.password|add_class:"input-field form-control" }}
+                            <input type="password" name="password" class="input-field form-control">
                         <i class="bx bx-lock-alt icon"></i>
                     </div>
                     <div class="input_box">
                         <label for="cnfrmpass" class="label">Confirm Password</label>
-                        {{ form.confirm_password|add_class:"input-field form-control" }}
+                            <input type="password" name="cnfrmpass" class="input-field form-control">
                         <i class="bx bx-lock-alt icon"></i>
                     </div>
                     <div>
